@@ -4,12 +4,13 @@ import java.util.concurrent.*;
 
 /**
  * 创建线程池（从线程池中获取线程对象）
- * new ThreadPoolExecutor(int corePoolSize,   //初始线程数量（线程池中最起码要有的线程数量）
- *                    int maximumPoolSize,  //最大线程数量
- *                    ong keepAliveTime, //空闲时间（当处于空闲状态的线程，超过这个时间，就会被释放）
- *                    TimeUnit unit, //空闲时间的单位（秒，分）
+ * 线程池的七大参数
+ * new ThreadPoolExecutor(int corePoolSize,  //核心线程数，也就是线程池中常驻线程数（线程池中最起码要有的线程数量）
+ *                    int maximumPoolSize,  //最大线程数量，也就是线程池中能容纳同时执行的最大线程数
+ *                    long keepAliveTime, //空闲线程的存活时间（当处于空闲状态的线程，超过这个时间，就会被释放）
+ *                    TimeUnit unit, //存活时间的单位（秒，分）
  *                    BlockingQueue<Runnable> workQueue, //阻塞队列
- *                    ThreadFactory threadFactory,  //创建线程使用的工厂
+ *                    ThreadFactory threadFactory,  //创建线程池中的线程使用的工厂
  *                    RejectedExecutionHandler handler) //拒接政策
  *
  * 四大拒绝策略

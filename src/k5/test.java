@@ -17,7 +17,7 @@ public class test {
         new Thread(futureTask, "a").start(); //开启线程
 
         try {
-            String s = futureTask.get();//获取callable返回值，get方法可以能会产生阻塞，放在最后执行
+            String s = futureTask.get();//获取callable返回值，get方法可能会产生阻塞，放在最后执行
             System.out.println(s);
         } catch (InterruptedException e) {
             e.printStackTrace();
